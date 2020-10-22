@@ -1,0 +1,56 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/basic_project?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2b8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+
+
+
+zy:
+  # 数据库表配置，通过该配置，可指定需要生成哪些表或者排除哪些表
+  strategy:
+    # 数据库表映射到实体的命名策略 underline_to_camel : 下划线转驼峰命名  no_change ： 不做任何改变，原样输出
+    naming: underline_to_camel
+    # 数据库表字段映射到实体的命名策略, 未指定按照 naming 执行
+    columnNaming: underline_to_camel
+    # 表前缀
+    tablePrefix: t_
+    # 字段前缀
+    #fieldPrefix:
+    # 【实体】是否为lombok模型（默认 false）
+    entityLombokModel: false
+    # 生成 @RestController 控制器
+    restControllerStyle: true
+    # 驼峰转连字符
+    controllerMappingHyphenStyle: true
+    # 默认激活进行sql模糊表名匹配,关闭之后likeTable与notLikeTable将失效，include和exclude将使用内存过滤
+    enableSqlFilter: false
+    # 需要包含的表名，当enableSqlFilter为false时，允许正则表达式（与exclude二选一配置），当有多个表时以“,”分割
+    ## include与exclude只可以配置一项，都不配置时，生成该库中所有表
+    include: t_dept,t_user
+    # 需要排除的表名，当enableSqlFilter为false时，允许正则表达式
+    #exclude: t_dept
+
+  # 包名配置，通过该配置，指定生成代码的包路径
+  packageInfo:
+    # 父包名。如果为空，将下面子包名必须写全部， 否则就只需写子包名
+    parent: com.baomidou
+    # 父包模块名
+    moduleName: one
+
+  # 全局策略配置
+  globalConfig:
+    # 生成文件的输出目录，不填默认是生成到本项目的/src/main/java目录下
+    #outputDir: F:\tmp
+    # 是否覆盖已有文件
+    fileOverride: true
+    # 是否打开输出目录
+    open: false
+    # 是否在xml中添加二级缓存配置
+    enableCache: false
+    # 开发人员
+    author: zy
+    # %sBusiness 生成 UserBusiness
+    serviceName: '%sService'
+
