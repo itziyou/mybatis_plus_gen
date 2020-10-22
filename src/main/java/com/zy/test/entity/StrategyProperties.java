@@ -1,6 +1,8 @@
 package com.zy.test.entity;
 
 import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author ziyou
@@ -9,7 +11,9 @@ import lombok.Data;
  * </p>
  */
 @Data
-public class Strategy {
+@Configuration
+@ConfigurationProperties("zy.strategy")
+public class StrategyProperties {
 
     /**
      * 数据库表映射到实体的命名策略

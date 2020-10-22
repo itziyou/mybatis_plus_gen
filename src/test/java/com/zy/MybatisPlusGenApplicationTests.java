@@ -8,7 +8,9 @@ import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-import com.zy.test.entity.CustomerConfig;
+import com.zy.test.entity.GlobalConfigProperties;
+import com.zy.test.entity.PackageInfoProperties;
+import com.zy.test.entity.StrategyProperties;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +35,11 @@ public class MybatisPlusGenApplicationTests {
     private String password;
 
     @Autowired
-    private CustomerConfig customerConfig;
+    private GlobalConfigProperties globalConfigProperties;
+    @Autowired
+    private PackageInfoProperties packageInfoProperties;
+    @Autowired
+    private StrategyProperties strategyProperties;
 
 
     @Test
@@ -45,7 +51,7 @@ public class MybatisPlusGenApplicationTests {
         GlobalConfig gc = new GlobalConfig();
         String projectPath = System.getProperty("user.dir");
         // 生成文件的输出目录
-        String outputDir = customerConfig.getGlobalConfig().getOutputDir();
+        String outputDir = globalConfigProperties.getOutputDir();
         if (StringUtils.isNotBlank(outputDir)) {
             gc.setOutputDir(outputDir);
         } else {
@@ -53,14 +59,14 @@ public class MybatisPlusGenApplicationTests {
         }
 
         // 作者
-        gc.setAuthor(customerConfig.getGlobalConfig().getAuthor());
+        gc.setAuthor(globalConfigProperties.getAuthor());
         // 是否打开输出目录
-        gc.setOpen(customerConfig.getGlobalConfig().getOpen());
+        gc.setOpen(globalConfigProperties.getOpen());
         // 是否在xml中添加二级缓存配置
-        gc.setEnableCache(customerConfig.getGlobalConfig().getEnableCache());
+        gc.setEnableCache(globalConfigProperties.getEnableCache());
         // 是否覆盖已有文件
-        gc.setFileOverride(customerConfig.getGlobalConfig().getFileOverride());
-        gc.setServiceName(customerConfig.getGlobalConfig().getServiceName());
+        gc.setFileOverride(globalConfigProperties.getFileOverride());
+        gc.setServiceName(globalConfigProperties.getServiceName());
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
@@ -73,8 +79,8 @@ public class MybatisPlusGenApplicationTests {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setModuleName(customerConfig.getPackageInfo().getModuleName());
-        pc.setParent(customerConfig.getPackageInfo().getParent());
+        pc.setModuleName(packageInfoProperties.getModuleName());
+        pc.setParent(packageInfoProperties.getParent());
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -114,31 +120,31 @@ public class MybatisPlusGenApplicationTests {
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
         // 数据库表映射到实体的命名策略
-        strategy.setNaming(this.getNamingStrategy(customerConfig.getStrategy().getNaming()));
+        strategy.setNaming(this.getNamingStrategy(strategyProperties.getNaming()));
         // 数据库表字段映射到实体的命名策略, 未指定按照 naming 执行
-        strategy.setColumnNaming(this.getNamingStrategy(customerConfig.getStrategy().getColumnNaming()));
+        strategy.setColumnNaming(this.getNamingStrategy(strategyProperties.getColumnNaming()));
         // 【实体】是否为lombok模型（默认 false）
-        strategy.setEntityLombokModel(customerConfig.getStrategy().getEntityLombokModel());
+        strategy.setEntityLombokModel(strategyProperties.getEntityLombokModel());
         // 生成 @RestController 控制器
-        strategy.setRestControllerStyle(customerConfig.getStrategy().getRestControllerStyle());
+        strategy.setRestControllerStyle(strategyProperties.getRestControllerStyle());
         // 默认激活进行sql模糊表名匹配,关闭之后likeTable与notLikeTable将失效，include和exclude将使用内存过滤
-        strategy.setEnableSqlFilter(customerConfig.getStrategy().getEnableSqlFilter());
+        strategy.setEnableSqlFilter(strategyProperties.getEnableSqlFilter());
 
         // 包含的表名
-        String include = customerConfig.getStrategy().getInclude();
+        String include = strategyProperties.getInclude();
         if (StringUtils.isNotBlank(include)) {
             strategy.setInclude(include.split(","));
         }
         // 不包含的表明
-        String exclude = customerConfig.getStrategy().getExclude();
+        String exclude = strategyProperties.getExclude();
         if (StringUtils.isNotBlank(exclude)) {
             strategy.setExclude(exclude.split(","));
         }
 
         // 驼峰转连字符
-        strategy.setControllerMappingHyphenStyle(customerConfig.getStrategy().getControllerMappingHyphenStyle());
+        strategy.setControllerMappingHyphenStyle(strategyProperties.getControllerMappingHyphenStyle());
         // 表前缀
-        String tablePrefix = customerConfig.getStrategy().getTablePrefix();
+        String tablePrefix = strategyProperties.getTablePrefix();
         if (StringUtils.isNotBlank(tablePrefix)) {
             strategy.setTablePrefix(tablePrefix);
         }

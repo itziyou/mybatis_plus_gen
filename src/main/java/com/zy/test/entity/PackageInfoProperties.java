@@ -1,6 +1,8 @@
 package com.zy.test.entity;
 
 import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author ziyou
@@ -9,7 +11,9 @@ import lombok.Data;
  * </p>
  */
 @Data
-public class PackageInfo {
+@Configuration
+@ConfigurationProperties("zy.package-info")
+public class PackageInfoProperties {
 
     /**
      * 父包名。如果为空，将下面子包名必须写全部， 否则就只需写子包名

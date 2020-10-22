@@ -1,0 +1,257 @@
+{
+  "groups": [
+    {
+      "name": "zy.global-config",
+      "type": "com.zy.test.entity.GlobalConfigProperties",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties"
+    },
+    {
+      "name": "zy.package-info",
+      "type": "com.zy.test.entity.PackageInfoProperties",
+      "sourceType": "com.zy.test.entity.PackageInfoProperties"
+    },
+    {
+      "name": "zy.strategy",
+      "type": "com.zy.test.entity.StrategyProperties",
+      "sourceType": "com.zy.test.entity.StrategyProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "zy.global-config.author",
+      "type": "java.lang.String",
+      "description": "开发人员",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties",
+      "defaultValue": "admin"
+    },
+    {
+      "name": "zy.global-config.controller-name",
+      "type": "java.lang.String",
+      "description": "controller 命名方式 默认值：null 例如：%sAction 生成 UserAction",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties"
+    },
+    {
+      "name": "zy.global-config.date-type",
+      "type": "java.lang.String",
+      "description": "时间类型对应策略",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties"
+    },
+    {
+      "name": "zy.global-config.enable-cache",
+      "type": "java.lang.Boolean",
+      "description": "是否在xml中添加二级缓存配置",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "zy.global-config.entity-name",
+      "type": "java.lang.String",
+      "description": "实体命名方式 默认值：null 例如：%sEntity 生成 UserEntity",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties"
+    },
+    {
+      "name": "zy.global-config.file-override",
+      "type": "java.lang.Boolean",
+      "description": "是否覆盖已有文件",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "zy.global-config.id-type",
+      "type": "java.lang.String",
+      "description": "指定生成的主键的ID类型",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties"
+    },
+    {
+      "name": "zy.global-config.mapper-name",
+      "type": "java.lang.String",
+      "description": "mapper 命名方式 默认值：null 例如：%sDao 生成 UserDao",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties"
+    },
+    {
+      "name": "zy.global-config.open",
+      "type": "java.lang.Boolean",
+      "description": "是否打开输出目录",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "zy.global-config.output-dir",
+      "type": "java.lang.String",
+      "description": "生成文件的输出目录",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties"
+    },
+    {
+      "name": "zy.global-config.service-impl-name",
+      "type": "java.lang.String",
+      "description": "service impl 命名方式 默认值：null 例如：%sBusinessImpl 生成 UserBusinessImpl",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties"
+    },
+    {
+      "name": "zy.global-config.service-name",
+      "type": "java.lang.String",
+      "description": "service 命名方式 默认值：null 例如：%sBusiness 生成 UserBusiness",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties",
+      "defaultValue": "%sService"
+    },
+    {
+      "name": "zy.global-config.swagger2",
+      "type": "java.lang.Boolean",
+      "description": "开启 swagger2 模式",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties"
+    },
+    {
+      "name": "zy.global-config.xml-name",
+      "type": "java.lang.String",
+      "description": "Mapper xml 命名方式 默认值：null 例如：%sDao 生成 UserDao.xml",
+      "sourceType": "com.zy.test.entity.GlobalConfigProperties"
+    },
+    {
+      "name": "zy.package-info.controller",
+      "type": "java.lang.String",
+      "description": "Controller包名",
+      "sourceType": "com.zy.test.entity.PackageInfoProperties"
+    },
+    {
+      "name": "zy.package-info.entity",
+      "type": "java.lang.String",
+      "description": "Entity包名",
+      "sourceType": "com.zy.test.entity.PackageInfoProperties"
+    },
+    {
+      "name": "zy.package-info.mapper",
+      "type": "java.lang.String",
+      "description": "Mapper包名",
+      "sourceType": "com.zy.test.entity.PackageInfoProperties"
+    },
+    {
+      "name": "zy.package-info.module-name",
+      "type": "java.lang.String",
+      "description": "父包模块名",
+      "sourceType": "com.zy.test.entity.PackageInfoProperties",
+      "defaultValue": "example"
+    },
+    {
+      "name": "zy.package-info.parent",
+      "type": "java.lang.String",
+      "description": "父包名。如果为空，将下面子包名必须写全部， 否则就只需写子包名",
+      "sourceType": "com.zy.test.entity.PackageInfoProperties",
+      "defaultValue": "com.baomidou"
+    },
+    {
+      "name": "zy.package-info.path-info",
+      "type": "java.lang.String",
+      "description": "路径配置信息",
+      "sourceType": "com.zy.test.entity.PackageInfoProperties"
+    },
+    {
+      "name": "zy.package-info.service",
+      "type": "java.lang.String",
+      "description": "Service包名",
+      "sourceType": "com.zy.test.entity.PackageInfoProperties"
+    },
+    {
+      "name": "zy.package-info.service-impl",
+      "type": "java.lang.String",
+      "description": "Service Impl包名",
+      "sourceType": "com.zy.test.entity.PackageInfoProperties"
+    },
+    {
+      "name": "zy.package-info.xml",
+      "type": "java.lang.String",
+      "description": "Mapper XML包名",
+      "sourceType": "com.zy.test.entity.PackageInfoProperties"
+    },
+    {
+      "name": "zy.strategy.column-naming",
+      "type": "java.lang.String",
+      "description": "数据库表字段映射到实体的命名策略, 未指定按照 naming 执行",
+      "sourceType": "com.zy.test.entity.StrategyProperties",
+      "defaultValue": "underline_to_camel"
+    },
+    {
+      "name": "zy.strategy.controller-mapping-hyphen-style",
+      "type": "java.lang.Boolean",
+      "description": "驼峰转连字符",
+      "sourceType": "com.zy.test.entity.StrategyProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "zy.strategy.enable-sql-filter",
+      "type": "java.lang.Boolean",
+      "description": "enableSqlFilter（since 3.3.1） <p> 默认激活进行sql模糊表名匹配 <p> 关闭之后likeTable与notLikeTable将失效，include和exclude将使用内存过滤 <p> 如果有sql语法兼容性问题的话，请手动设置为false",
+      "sourceType": "com.zy.test.entity.StrategyProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "zy.strategy.entity-boolean-column-remove-is-prefix",
+      "type": "java.lang.Boolean",
+      "description": "Boolean类型字段是否移除is前缀（默认 false）",
+      "sourceType": "com.zy.test.entity.StrategyProperties"
+    },
+    {
+      "name": "zy.strategy.entity-lombok-model",
+      "type": "java.lang.Boolean",
+      "description": "【实体】是否为lombok模型（默认 false）",
+      "sourceType": "com.zy.test.entity.StrategyProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "zy.strategy.entity-table-field-annotation-enable",
+      "type": "java.lang.Boolean",
+      "description": "是否生成实体时，生成字段注解",
+      "sourceType": "com.zy.test.entity.StrategyProperties"
+    },
+    {
+      "name": "zy.strategy.exclude",
+      "type": "java.lang.String",
+      "description": "需要排除的表名，当enableSqlFilter为false时，允许正则表达式",
+      "sourceType": "com.zy.test.entity.StrategyProperties"
+    },
+    {
+      "name": "zy.strategy.field-prefix",
+      "type": "java.lang.String",
+      "description": "字段前缀",
+      "sourceType": "com.zy.test.entity.StrategyProperties"
+    },
+    {
+      "name": "zy.strategy.include",
+      "type": "java.lang.String",
+      "description": "需要包含的表名，当enableSqlFilter为false时，允许正则表达式（与exclude二选一配置）",
+      "sourceType": "com.zy.test.entity.StrategyProperties"
+    },
+    {
+      "name": "zy.strategy.like-table",
+      "type": "java.lang.String",
+      "description": "自3.3.0起，模糊匹配表名（与notLikeTable二选一配置）",
+      "sourceType": "com.zy.test.entity.StrategyProperties"
+    },
+    {
+      "name": "zy.strategy.naming",
+      "type": "java.lang.String",
+      "description": "数据库表映射到实体的命名策略",
+      "sourceType": "com.zy.test.entity.StrategyProperties",
+      "defaultValue": "underline_to_camel"
+    },
+    {
+      "name": "zy.strategy.not-like-table",
+      "type": "java.lang.String",
+      "description": "自3.3.0起，模糊排除表名",
+      "sourceType": "com.zy.test.entity.StrategyProperties"
+    },
+    {
+      "name": "zy.strategy.rest-controller-style",
+      "type": "java.lang.Boolean",
+      "description": "生成 @RestController 控制器",
+      "sourceType": "com.zy.test.entity.StrategyProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "zy.strategy.table-prefix",
+      "type": "java.lang.String",
+      "description": "表前缀",
+      "sourceType": "com.zy.test.entity.StrategyProperties"
+    }
+  ],
+  "hints": []
+}

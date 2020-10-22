@@ -1,6 +1,8 @@
 package com.zy.test.entity;
 
 import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * @author ziyou
@@ -9,7 +11,9 @@ import lombok.Data;
  * </p>
  */
 @Data
-public class GlobalConfig {
+@Configuration
+@ConfigurationProperties("zy.global-config")
+public class GlobalConfigProperties {
 
     /**
      * 生成文件的输出目录
