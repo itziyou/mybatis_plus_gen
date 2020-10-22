@@ -3,9 +3,9 @@
 ### 使用方法
 1. “zy.strategy.include”：配置指定需要包含的表名,多个表名以“,”分割<br><br>
 #### 启动test包下MybatisPlusGenApplicationTests下的run()方法生成<br>
-![](src/main/resources/static/img/run.gif)
+![img](img/run.gif)
 #### 如需修改配置请前往application.yml<br>
-![](src/main/resources/static/img/yml.gif)
+![img](img/yml.gif)
 #### 官方网站：
 1. https://baomidou.com/guide/generator.html
 2. https://baomidou.com/config/generator-config.html
