@@ -1,9 +1,9 @@
 ## MybatisPlus代码生成器
 ### 使用方法
 #### 启动test包下MybatisPlusGenApplicationTests下的run()方法生成<br>
-![](.\src\main\resources\static\img\run.gif)
+![](src/main/resources/static/img/run.gif)
 #### 如需修改配置请前往application.yml<br>
-![](.\src\main\resources\static\img\yml.gif)
+![](src/main/resources/static/img/yml.gif)
 #### 官方网站：
 1. https://baomidou.com/guide/generator.html
 2. https://baomidou.com/config/generator-config.html
